@@ -3,6 +3,14 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import I from '../assets/photo.jpeg'
+import html from '../assets/Logo-HTML.png'
+import CSS from '../assets/Logo-CSS3.png'
+import JS from '../assets/Logo-JS.png'
+import react from '../assets/Logo-React.png'
+import Redux from '../assets/Logo-Redux.png'
+import GIT from '../assets/Logo-GIT.png'
+import reactRouter from '../assets/Logo-React-Router.png'
+
 
 const Home = () => {
   return (
@@ -28,16 +36,23 @@ const Home = () => {
       </div>
       <p className='Title'><strong>TECNOLOGIAS</strong></p>
       <div className='Technologies'>
-        <img src=".\src\assets\Logo-HTML.png" alt="html" />
-        <img src=".\src\assets\Logo-CSS3.png" alt="CSS3" />
-        <img src=".\src\assets\Logo-JS.png" alt="JS" />
-        <img src=".\src\assets\Logo-React.png" alt="React" />
-        <img src=".\src\assets\Logo-Redux.png" alt="Redux" />
-        <img src=".\src\assets\Logo-GIT.png" alt="GIT" />
-        <img src=".\src\assets\Logo-React-Router.png" alt="GIT" />
+        <img src={html} alt="html" />
+        <img src={CSS} alt="CSS3" />
+        <img src={JS} alt="JS" />
+        <img src={react} alt="React" />
+        <img src={Redux} alt="Redux" />
+        <img src={GIT} alt="GIT" />
+        <img src={reactRouter} alt="GIT" />
       </div>
     </div>
   );
 };
 
+// ".\src\assets\Logo-HTML.png"
+// ".\src\assets\Logo-CSS3.png"
+// ".\src\assets\Logo-JS.png"
+// ".\src\assets\Logo-React.png"
+// ".\src\assets\Logo-Redux.png"
+// ".\src\assets\Logo-GIT.png"
+// ".\src\assets\Logo-React-Router.png"
 export default Home;
