@@ -1,5 +1,17 @@
-::root {
-  --primary-color: linear-gradient(45deg, white, black);
+:root {
+  --primary-url: url(assets/pexels-mike-krejci-2743797.jpg);
+  --second-url: url(assets/pexels-pixabay-316093.jpg);
+  --tercer-color: rgba(228, 228, 228, 0.75);
+  --four-color: white;
+  --five-color: black;
+  --six-color: rgb(133, 133, 133);
+  --seven-color: rgba(255, 255, 255, 0.70);
+  --eight-color: rgba(32, 32, 32, 0.7);
+  --nine-color: rgba(0, 255, 234, 0.842);
+  --ten-color: rgb(13, 138, 240);
+  --eleven-color: rgb(255, 255, 161);
+  --twelve-color:  rgb(255, 194, 63);
+  --thirteen-color: linear-gradient(45deg, rgba(255, 217, 0, 0.699), rgba(255, 0, 0, 0.699));
 }
 
 * {
@@ -10,15 +22,16 @@
 }
 
 body {
-  background: url(assets/pexels-mike-krejci-2743797.jpg);
-  background-size: cover;
+  background: var(--primary-url);
+  background-size: cover;  
+  color: var(--five-color);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Navbar {
-  background: rgba(228, 228, 228, 0.75);
+  background: var(--tercer-color);
   width: 99.95vw;
   height: 60px;
   display: flex;
@@ -30,30 +43,75 @@ body {
   padding: 0px 20px;
 }
 
-.Navbar ul {
+.options {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  position: absolute;
+  top: 70px;
   gap: 0px 130px;
+  margin-right: 30px;
+  background: var(--seven-color);
 }
 
-.Navbar a {  
-  color: black;
+.options a {
+  width: 100%;
   font-size: 18px;
   border: 6px groove transparent;
   text-align: center;
   padding: 3px 5px;
+  color: var(--five-color);
 }
 
-.Navbar a:hover {  
-  text-shadow: 2px 1px 0px rgba(200, 0, 0, 0.75);
+.Navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px 43vw;
+}
+
+.options a:hover {
+  background: var(--thirteen-color);
   color: black;
 }
 
-.Navbar ul a:hover {
-  border: 6px solid rgba(200, 0, 0, 0.75);
-  box-shadow: 3px 3px 0px 0px;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 20%;
+.Navbar ul svg {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-dark-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  border-radius: 40px;
+  width: 90px;
+  height: 30px;
+}
+
+.btn-dark-mode div {
+  position: relative;
+  left: -30px;
+  background: var(--four-color);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-dark-mode .active {
+  left: 30px;
+}
+
+#A {
+  border: 4px solid var(--nine-color);
+  border-top: 4px solid var(--ten-color);
+  border-left: 4px solid var(--ten-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  animation: rotate 1s infinite;
 }
 
 #Time {
@@ -61,13 +119,14 @@ body {
 }
 
 #Home {
-  background: rgba(255, 255, 255, 0.70);
+  background: var(--seven-color);
   border-radius: 10px;
   display: flex;
   width: 530px;
-  height: 300px;
+  height: 340px;
   border-radius: 50px 0px 0px 50px;
   overflow: hidden auto;
+  color: black;
 }
 
 #Home::-webkit-scrollbar {
@@ -83,6 +142,34 @@ body {
   width: 45%;
   height: 100%;
   border-radius: 50px 0px 0px 50px;
+}
+
+@media (max-width: 1090px){
+  #Home {
+    background: var(--seven-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    overflow: hidden auto;
+    color: black;
+    padding: 20px;
+    overflow-y: hidden;
+  }
+
+  #Home:nth-child(1){
+    align-items: flex-start;
+  }
+
+  #Home img{
+    background: var(--seven-color);
+    border: 5px solid var(--thirteen-color);
+    width: 50%;
+    height: 49%;
+    border-radius: 19%;
+  }
 }
 
 #Home span {
@@ -132,8 +219,62 @@ body {
   padding: 5px;
 }
 
+.container-button {
+  position: absolute;
+  top: 85%;
+  left: 47.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-shadow: 2px 2px 15px gold;
+  width: 110px;
+  height: 60px;
+}
+
+#circle {
+  position: absolute;
+  top: -30px;
+  width: 103px;
+  height: 103px;
+  z-index: calc(0);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#circle:hover{
+  background: rgba(0, 0, 0, 0.7);
+  border: 4px solid rgb(0, 247, 255);
+  border-right: 4px solid  rgb(21, 174, 245);
+  border-left: 4px solid rgb(21, 174, 245);
+  animation: rotate 0.7s infinite;
+}
+
+@keyframes rotate {
+  0%{ transform: rotate(0deg); }
+  10%{ transform: rotate(36deg); }
+
+  20%{ transform: rotate(72deg); }
+  30%{ transform: rotate(108deg); }
+
+  40%{ transform: rotate(144deg); }
+  50%{ transform: rotate(180deg); }
+
+  60%{ transform: rotate(216deg); }
+  70%{ transform: rotate(252deg); }
+
+  80%{ transform: rotate(288deg); }
+  90%{ transform: rotate(324deg); }
+
+  100%{ transform: rotate(360deg); }
+}
+
 .present {
-  color: gold;
+  z-index: calc(2);
+}
+
+.present strong {
+  color: var(--four-color);
 }
 
 #flecha {
@@ -154,29 +295,78 @@ body {
   left: 2.75px;
 }
 
-.container-button {
-  width: 110px;
-  height: 60px;
-  position: absolute;
-  top: 85%;
-  left: 47.5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  color: gold;
-  text-shadow: 2px 2px 15px gold;
+@media (max-width: 1090px) {
+  .container-button {
+    position: absolute;
+    top: 40.5%;
+    left: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-shadow: 2px 2px 15px gold;
+    width: 110px;
+    height: 60px;
+  }
+
+  #circle {
+    position: absolute;
+    top: -30px;
+    width: 103px;
+    height: 103px;
+    z-index: calc(0);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  #circle:hover{
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px solid rgb(0, 247, 255);
+    border-right: 4px solid  rgb(21, 174, 245);
+    border-left: 4px solid rgb(21, 174, 245);
+    animation: rotate 0.7s infinite;
+  }
+
+  #icons-social {
+    position: absolute;
+    top: 15%;
+    left: 55%;
+  }
+
+  #icons-social svg{
+    margin: 0px 10px;
+  }
+
+  #Home span {
+    position: relative;
+    top: -160%;
+    left: 64.5%;
+  }
+
+  #Home span:hover{
+    color: black;
+    background: gold;
+    box-shadow: 3px 3px 1px 0px;
+    left: 63.7%;
+  }
+  
+  #Home span a{
+    color:white;
+  }
+  
+  #Home span a:hover{
+    color: black;
+  }
 }
 
-/* .container-button a {
-
-} */
+.Projects {
+  margin: 70px 0px 0px 30px;
+}
 
 .Projects h1 {
-  color: rgb(255, 194, 63);
-  width: 460px;
+  color: var(--twelve-color);
+  width: 430px;
   margin: 20px 0px;
-  /* border: 2px solid red; */
 }
 
 .Projects h1:hover{
@@ -185,11 +375,13 @@ body {
 
 .Projects>div{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 3px;
-  /* border: 2px solid red; */
-  overflow: hidden;
+}
+
+.Projects div a img {
+  background: black;
 }
 
 .Projects img {
@@ -202,31 +394,49 @@ body {
   transform: scale(1.02);
 }
 
+@media (max-width: 1030px){
+  .Projects>div{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px){
+  .Projects>div{
+    grid-template-columns: 1fr;
+  }
+}
+
+.Title {
+  position: absolute;
+  top: 70px;
+  left: 130px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
 .Technologies {
   display: flex; 
   flex-direction: column;
   gap: 10px;
   position: absolute;
   top: 110px;
-  left: 70px;
+  left: 150px;
   overflow: hidden;
   height: 390px;
-  /* border: 2px solid gold; */
-  /* background: rgba(255, 255, 255, 0.70); */
-}
-
-.Title {
-  position: absolute;
-  top: 70px;
-  left: 70px;
-  font-size: 20px;
-  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.20);
 }
 
 .Technologies img {
   width: 93px;
   height: 90px;
   animation: change 6s infinite;
+}
+
+@media (max-width: 1090px) {
+  .Title, .Technologies img{
+    position: absolute;
+    left: -300px;
+  }
 }
 
 @keyframes change{
@@ -247,4 +457,12 @@ body {
   90%{ margin-top: -20px;}
 
   100%{ margin-top: 0;} */
+}
+
+.aboutme {
+  background: var(--thirteen-color);
+  color: white;
+  width: 40vw;
+  padding: 15px;
+  margin-top: 70px;
 }
