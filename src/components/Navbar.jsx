@@ -56,9 +56,9 @@ const Navbar = () => {
           <Link to='/portfolio'>Portfolio</Link>
           <Link to='/aboutme'>About me</Link>
         </div>}
-        <div className='btn-dark-mode'>
+        {!day && <div className='btn-dark-mode'>
           <div id='A' className='active' onClick={()=>activeDark()}><FaSun/></div>
-        </div>
+        </div>}
       </ul>
       <strong>🕒Tiempo: <p id='Time'></p></strong>
     </nav>

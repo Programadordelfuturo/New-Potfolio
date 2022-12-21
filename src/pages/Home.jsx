@@ -15,7 +15,7 @@ import reactRouter from '../assets/Logo-React-Router.png'
 
 const Home = () => {
   return (
-    <div>
+    <div className='container-Home'>
       <div>
         <div id='Home'>
           <img src={I} alt="image" />

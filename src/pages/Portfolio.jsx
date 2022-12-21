@@ -9,7 +9,7 @@ import Pquotes from '../assets/P-Quotes.png';
 const Portfolio = () => {
   return (
     <div className='Projects'>
-      <h1>Portfolio Projects</h1>
+      <h1>Portfolio<br/>Projects</h1>
       <div>
         <a href="https://dazzling-liger-d9e01c.netlify.app" target='_blank'><img src={Pclima} alt="image" /></a>
         <a href="https://dazzling-florentine-1b687f.netlify.app" target='_blank'><img src={BoxShadow} alt="image" /></a>
