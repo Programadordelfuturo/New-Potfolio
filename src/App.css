@@ -28,6 +28,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: gold;
+  border-radius: 30px;
 }
 
 .Navbar {
@@ -45,7 +55,6 @@ body {
 
 .Navbar ul {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   gap: 0px 3em;
 }
@@ -56,11 +65,48 @@ body {
   cursor: pointer;
 }
 
+#LoadingScreen, #video-Loading, #LoadingScreen strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+#LoadingScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+#LoadingScreen strong, #video-Loading div {
+  border-radius: 100%;  
+  width: 90px;
+  height: 90px;
+  border: 3px solid black;
+  gap: 0;
+}
+
+#LoadingScreen strong {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+#video-Loading div {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border-right: 3px solid blue;
+  animation: rotate 0.7s infinite;
+}
+
 .options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  /* position: absolute; */
   top: 70px;
   margin-right: 20px;
   background: var(--seven-color);
@@ -69,7 +115,6 @@ body {
 }
 
 .options a {
-  /* width: 100%; */
   font-size: 18px;
   border: 6px groove transparent;
   text-align: center;
@@ -211,6 +256,11 @@ body {
   width: 25px;
   height: 25px;
 }
+
+#Home div a svg:hover{
+  color: cyan;
+}
+
 
 #Home div, #Home div p {
   padding: 10px;
@@ -440,7 +490,7 @@ body {
 .Technologies img {
   width: 93px;
   height: 90px;
-  animation: change 6s infinite;
+  animation: change 8s infinite;
 }
 
 @media (max-width: 1090px) {
@@ -452,22 +502,17 @@ body {
 
 @keyframes change{
   
-  0%{ margin-top: 0px; margin-bottom: 0px;}
-  10%{ margin-top: -90px; margin-bottom: 90px}
+  0%{ margin-top: 0px; margin-bottom: 0px }
+  10%{ margin-top: -90px; margin-bottom: 90px }
 
-  20%{ margin-top: -200px; margin-bottom: 200px}
-  35%{ margin-top: -295px; margin-bottom: 295px}
+  20%{ margin-top: -200px; margin-bottom: 200px }
+  35%{ margin-top: -265px; margin-bottom: 265px }
 
-  /* 50%{ margin-top: -385px; margin-bottom: 385px}
-  65%{ margin-top: -485px; margin-bottom: 485px} */
+  50% { margin-top: -350px; margin-bottom: 350px }
+  65%{ margin-top: -450px; margin-bottom: 450px }
 
-  /*55%{ margin-top: -80px;}
-  70%{ margin-top: -40px;}
-
-  75%{ margin-top: -20px;}
-  90%{ margin-top: -20px;}
-
-  100%{ margin-top: 0;} */
+  80%{ margin-top: -550px; margin-bottom: 550px }
+  95%{ margin-top: -640px; margin-bottom: 640px }
 }
 
 .aboutme {

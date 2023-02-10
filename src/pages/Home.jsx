@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
-import I from '../assets/photo.jpeg'
-import html from '../assets/Logo-HTML.png'
-import CSS from '../assets/Logo-CSS3.png'
-import JS from '../assets/Logo-JS.png'
-import react from '../assets/Logo-React.png'
-import Redux from '../assets/Logo-Redux.png'
-import GIT from '../assets/Logo-GIT.png'
-import reactRouter from '../assets/Logo-React-Router.png'
-
+import I from '../assets/photo.jpeg';
+import html from '../assets/Logo-HTML.png';
+import CSS from '../assets/Logo-CSS3.png';
+import JS from '../assets/Logo-JS.png';
+import react from '../assets/Logo-React.png';
+import Redux from '../assets/Logo-Redux.png';
+import GIT from '../assets/Logo-GIT.png';
+import reactRouter from '../assets/Logo-React-Router.png';
+import Express from '../assets/Express.png';
+import nodeJS from '../assets/nodeJS.png';
+import Postgres from '../assets/PostgresSQL.png';
+import Sequelize from '../assets/Sequelize.png';
+import { useDispatch } from 'react-redux';
+import { upLoadingThunk } from '../store/slices/isLoading.slice';
 
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    dispatch(upLoadingThunk()) 
+  },[])
+
   return (
     <div className='container-Home'>
       <div>
@@ -24,9 +36,6 @@ const Home = () => {
               <strong>Luis Enrique Saravia Tornero</strong>
             </p>
             <p>Vivo actualmente en Lima Perú, e ingresé al mundo de la programación; para saber como funciona un Smart Contract, investigando cada vez más, me encanto la lógica y el alcance de desarrollo que puedo obtener con esta carrera.</p>
-            <span id='CV'>
-              <strong><a href='https://drive.google.com/uc?export=download&id=1UCS5-LWPiRQJRNtEFKA6glZ_7gMpWGAA' target='_blank'>Descargar CV</a></strong>
-            </span>
           </div>
           <div id='icons-social'>
             <a href="https://github.com/Programadordelfuturo" target='_blank' ><AiFillGithub/></a>
@@ -48,17 +57,14 @@ const Home = () => {
         <img src={react} alt="React" />
         <img src={Redux} alt="Redux" />
         <img src={GIT} alt="GIT" />
-        <img src={reactRouter} alt="GIT" />
+        <img src={reactRouter} alt="React-Router"/>
+        <img src={nodeJS} alt="nodeJS"/>
+        <img src={Express} alt="Express"/>
+        <img src={Postgres} alt="Postgres"/>
+        <img src={Sequelize} alt="Sequelize"/>
       </div>
     </div>
   );
 };
 
-// ".\src\assets\Logo-HTML.png"
-// ".\src\assets\Logo-CSS3.png"
-// ".\src\assets\Logo-JS.png"
-// ".\src\assets\Logo-React.png"
-// ".\src\assets\Logo-Redux.png"
-// ".\src\assets\Logo-GIT.png"
-// ".\src\assets\Logo-React-Router.png"
 export default Home;
