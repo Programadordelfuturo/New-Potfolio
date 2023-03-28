@@ -14,6 +14,7 @@ import Express from '../assets/Express.png';
 import nodeJS from '../assets/nodeJS.png';
 import Postgres from '../assets/PostgresSQL.png';
 import Sequelize from '../assets/Sequelize.png';
+import EEUU from '../assets/Americana.png'
 import { useDispatch } from 'react-redux';
 import { upLoadingThunk } from '../store/slices/isLoading.slice';
 
@@ -33,9 +34,14 @@ const Home = () => {
           <img src={I} alt="image" />
           <div>
             <p>
-              <strong>Luis Enrique Saravia Tornero</strong>
+              <strong id='NAME'>Luis Enrique Saravia Tornero</strong>
             </p>
-            <p>Vivo actualmente en Lima Perú, e ingresé al mundo de la programación; para saber como funciona un Smart Contract, investigando cada vez más, me encanto la lógica y el alcance de desarrollo que puedo obtener con esta carrera.</p>
+            <p>
+              <strong>
+                Desarrollador Full Stack Developer ReactJS, NodeJS, Express, MongoDB, PostgreSQL, 
+                Sequelize, TailWindCSS, React Hooks, Axios, Redux, NextJS, Python, TypeScript
+              </strong>
+            </p>
           </div>
           <div id='icons-social'>
             <a href="https://github.com/Programadordelfuturo" target='_blank' ><AiFillGithub/></a>
