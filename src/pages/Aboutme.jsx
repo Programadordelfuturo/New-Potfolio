@@ -13,7 +13,7 @@ const Aboutme = () => {
   return (
     <div className='aboutme'>
       <div>
-        <strong>Acerca de mi</strong>
+        <strong>Acerca de mí</strong>
         <p>
           Feliz de desarrollarme como programador día a día, continuamente realizo proyectos,
           pero a la par tengo Hobbies y deseos que estan prontos a acerce realidad, soy amante

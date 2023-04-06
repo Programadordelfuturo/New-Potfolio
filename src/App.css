@@ -1,6 +1,6 @@
 :root {
-  --primary-url: url(assets/pexels-mike-krejci-2743797.jpg);
-  --second-url: url(assets/pexels-pixabay-316093.jpg);
+  --primary-url: linear-gradient(45deg, rgb(35, 161, 211), rgb(35, 161, 211));
+  --second-url: linear-gradient(90deg, black, gray);
   --tercer-color: rgba(228, 228, 228, 0.75);
   --four-color: white;
   --five-color: black;
@@ -12,6 +12,7 @@
   --eleven-color: rgb(255, 255, 161);
   --twelve-color:  rgb(255, 194, 63);
   --thirteen-color: linear-gradient(45deg, rgba(255, 217, 0, 0.699), rgba(255, 0, 0, 0.699));
+  --fourteen-color: rgba(0, 0, 0);
 }
 
 * {
@@ -427,11 +428,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Projects {
-  margin: 70px 0px 0px 20px;
+  margin: 70px 30px 0px
 }
 
 .Projects h1 {
-  color: var(--twelve-color);
+  color: rgb(0, 60, 255);
   width: 76vw;
   margin: 20px 0px;
 }
@@ -443,21 +444,47 @@ body::-webkit-scrollbar-thumb {
 .Projects>div{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 70px;
   padding: 3px;
 }
 
-.Projects div a img {
-  background: black;
+.Projects div div {
+  border: 3px solid rgb(255, 183, 28);
+  border-radius: 5%;
+  overflow: hidden;
 }
 
-.Projects img {
-  border: 2px solid black;
-  width: 300px;
+.Projects div a img {
+  width: 100%;
   height: 200px;
 }
 
-.Projects img:hover {
+.Projects p {
+  display: grid;
+  place-items: center;
+  padding: 0 10px;
+}
+
+#fraemworks {
+  border: none;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+#fraemworks span {
+  border-radius: 15%;
+  border: 3px solid white;
+  padding: 0.4em;
+  display: grid;
+  place-items: center;
+  background: black;
+  color: white;
+  margin: 1em 0;
+}
+
+#fraemworks span:hover {
   transform: scale(1.02);
 }
 
@@ -490,7 +517,7 @@ body::-webkit-scrollbar-thumb {
   left: 150px;
   overflow: hidden;
   height: 390px;
-  background: rgba(255, 255, 255, 0.20);
+  background: rgb(255, 255, 255);
 }
 
 .Technologies img {
@@ -522,8 +549,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .aboutme {
-  background: var(--thirteen-color);
-  color: white;
+  background: rgba(0, 180, 180);
+  color: rgb(0, 0, 0);
   width: 40vw;
   padding: 15px;
   margin-top: 70px;
