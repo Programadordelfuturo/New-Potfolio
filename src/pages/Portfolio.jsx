@@ -1,16 +1,27 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { upLoadingThunk } from '../store/slices/isLoading.slice';
+import React, { useEffect, useState } from 'react';
 import { containerProjects } from '../utils/projects';
 
 const Portfolio = () => {
 
+  const [ page, setPage ] = useState(1)
+  const projectsPerPage = 6
+  const lastPage = Math.ceil(containerProjects.length/projectsPerPage)
+  const finalIndex = page*projectsPerPage
+  const firstIndex = (page - 1)*projectsPerPage;
+  
+  const paginated = containerProjects.slice(firstIndex, finalIndex);
+
   return (
     <div className='Projects'>
       <h1>Portafolio<br/>Proyectos</h1>
-      <div>
+      <div className='button-paginated'>
+        <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >Anterior</button>
+        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >Siguiente</button>
+        <button id='reset' onClick={() => setPage(1)}>Inicio</button>
+      </div>
+      <div className='container-projects'>
         {
-          containerProjects.map((project) => (
+          paginated.map((project) => (
             <div key={project.id}>
               <a href={project.referencia} target='_blank'>
                 <img src={project.img} alt={"image" + project.id} />
@@ -30,14 +41,13 @@ const Portfolio = () => {
           ))
         }
       </div>
+      <div className='button-paginated'>
+        <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >Anterior</button>
+        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >Siguiente</button>
+        <button id='reset' onClick={() => setPage(1)}>Inicio</button>
+      </div>
     </div>
   );
 };
 
 export default Portfolio;
-
-  // const dispatch = useDispatch();
-  
-  // useEffect(()=>{
-  //   dispatch(upLoadingThunk()) 
-  // },[])

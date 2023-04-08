@@ -5,6 +5,7 @@ import Pwelcome from '../assets/P-welcome.png';
 import Pclima from '../assets/P-clima.png';
 import Pquotes from '../assets/P-Quotes.png';
 import Pcalculadora from '../assets/P-Calculadora.png';
+import Pcontability from '../assets/P-contability.png'
 
 export const containerProjects = [
   {
@@ -33,7 +34,7 @@ export const containerProjects = [
     img: Ppokemon,
     texto: `Realizada para mostrar a todos los pokemones que existen
     con sus diferentes características, y estadísticas`,
-    tecnologies: ['React', 'axios', 'Router']
+    tecnologies: ['React', 'axios', 'Router', 'Redux']
   },
   {
     id: 4,
@@ -82,7 +83,7 @@ export const containerProjects = [
     id: 9,
     title: 'Contability Project',
     referencia: "https://one-proyect.netlify.app",
-    img: Pcalculadora,
+    img: Pcontability,
     texto: `Hecha para el mercado Chileno que ayuda a saber el
     monto final el cual tendra que pagar el cliente por un bien o servicio dado
     y tambien ayuda a calcular el monto que se tiene que presentar y pagar ante 
