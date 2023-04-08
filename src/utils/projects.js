@@ -5,7 +5,8 @@ import Pwelcome from '../assets/P-welcome.png';
 import Pclima from '../assets/P-clima.png';
 import Pquotes from '../assets/P-Quotes.png';
 import Pcalculadora from '../assets/P-Calculadora.png';
-import Pcontability from '../assets/P-contability.png'
+import Pcontability from '../assets/P-contability.png';
+import PtodoAPI from '../assets/P-ToDoAPI.png'
 
 export const containerProjects = [
   {
@@ -15,7 +16,7 @@ export const containerProjects = [
     img: Pclima,
     texto: `Aplicación que te permite ver el clima,
             la temperatura, la humedad de tu localización`,
-    tecnologies: ['React', 'axios']
+    tecnologies: ['React', 'axios', 'JavaScript', 'Vite']
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ export const containerProjects = [
     img: BoxShadow,
     texto: `Una aplicación que te devuelve un codigo CSS, para
     darle sombra a la caja en el box-model`,
-    tecnologies: ['HTML', 'CSS', 'JS']
+    tecnologies: ['HTML', 'CSS', 'JavaScript', 'Vite']
 
   },
   {
@@ -34,32 +35,32 @@ export const containerProjects = [
     img: Ppokemon,
     texto: `Realizada para mostrar a todos los pokemones que existen
     con sus diferentes características, y estadísticas`,
-    tecnologies: ['React', 'axios', 'Router', 'Redux']
+    tecnologies: ['React', 'axios', 'Router', 'Redux', 'JavaScript', 'Vite']
   },
   {
     id: 4,
-    title: 'Registra tu Nombre',
-    referencia: "https://sweet-malasada-784f81.netlify.app",
-    img: Pwelcome,
-    texto: `Permite mostrar tu nombre una vez agregado en el input`,
-    tecnologies: ['React']
+    title: 'Todo API',
+    referencia: "https://github.com/Programadordelfuturo/ToDo-App",
+    img: PtodoAPI,
+    texto: `API diseñada a crear nuevas tareas que hacer`,
+    tecnologies: ['JavaScript', 'nodeJS', 'Express', 'Sequelize', 'nodemon', 'Thunder Client'],
   },
   {
     id: 5,
-    title: 'App Rick And Morty',
-    referencia: "https://helpful-piroshki-e74e4c.netlify.app",
-    img: RickMorty,
-    texto: `Inspirada en la serie animada Rick and Morty, presenta
-    a los personajes de la serie y sus características`,
-    tecnologies: ['React', 'axios']
+    title: 'E-commers-API',
+    referencia: "https://github.com/Programadordelfuturo/Ecommers-backend",
+    img: PtodoAPI,
+    texto: `API para E-commers, de lo cual tienes productos, productos agregados al carrito, etc`,
+    tecnologies: ['JavaScript', 'nodeJS', 'Express', 'Sequelize', 'nodemon', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT', 'morgan'],
   },
   {
     id: 6,
-    title: 'Frases Celebres',
-    referencia: "https://lovely-halva-a54879.netlify.app",
-    img: Pquotes,
-    texto: `Puedes ver las frases ya preparadas que te deje 😉`,
-    tecnologies: ['React']
+    title: 'Proyect-NFT',
+    referencia: "https://etherscan.io/address/0x8b3a1873013a90c6077af72b2ab95263288ab941",
+    img: PtodoAPI,
+    texto: `Proyecto NFT, Smart Contract cargado en etherscan que contiene 10000 NFT's siendo personajes entre normales 
+    (personas de distintas etnias) y fantasticos (extraterresstres, fantasmas, spectros, etc)`,
+    tecnologies: ['JavaScript', 'nodeJS', 'Express']
   },
   {
     id: 7,
@@ -68,7 +69,7 @@ export const containerProjects = [
     img: Pcalculadora,
     texto: `Realicé una calculadora como práctica completa de las tecnologías
     basicas como JS, HTML, CSS`,
-    tecnologies: ['HTML', 'CSS', 'JS']
+    tecnologies: ['HTML', 'CSS', 'JavaScript', 'Vite']
   },
   {
     id: 8,
@@ -77,7 +78,7 @@ export const containerProjects = [
     img: Pcalculadora,
     texto: `Te da una contraseña con caracteres al azar, puedes escoger el
     tamaño de la contraseña`,
-    tecnologies: ['React']
+    tecnologies: ['React', 'JavaScript', 'Vite']
   },
   {
     id: 9,
@@ -88,6 +89,32 @@ export const containerProjects = [
     monto final el cual tendra que pagar el cliente por un bien o servicio dado
     y tambien ayuda a calcular el monto que se tiene que presentar y pagar ante 
     la institución correspondiente`,
-    tecnologies: ['Vue', 'TailwindCSS']
-  }
+    tecnologies: ['Vue', 'TailwindCSS', 'JavaScript', 'Vue CLI']
+  },
+  {
+    id: 10,
+    title: 'Registra tu Nombre',
+    referencia: "https://sweet-malasada-784f81.netlify.app",
+    img: Pwelcome,
+    texto: `Permite mostrar tu nombre una vez agregado en el input`,
+    tecnologies: ['React', 'JavaScript', 'Vite']
+  },
+  {
+    id: 11,
+    title: 'App Rick And Morty',
+    referencia: "https://helpful-piroshki-e74e4c.netlify.app",
+    img: RickMorty,
+    texto: `Inspirada en la serie animada Rick and Morty, presenta
+    a los personajes de la serie y sus características`,
+    tecnologies: ['React', 'axios', 'JavaScript', 'Vite']
+  },
+  {
+    id: 12,
+    title: 'Frases Celebres',
+    referencia: "https://lovely-halva-a54879.netlify.app",
+    img: Pquotes,
+    texto: `Puedes ver las frases ya preparadas que te deje 😉`,
+    tecnologies: ['React', 'JavaScript', 'Vite']
+  },
 ]
+

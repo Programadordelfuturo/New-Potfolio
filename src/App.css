@@ -22,6 +22,15 @@
   transition: all 0.2s;
 }
 
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: gold;
+  border-radius: 30px;
+}
+
 body {
   background: var(--primary-url);
   background-size: cover;  
@@ -30,15 +39,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: auto;
-}
-
-body::-webkit-scrollbar {
-  width: 7px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: gold;
-  border-radius: 30px;
 }
 
 .Navbar {
@@ -167,7 +167,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 20px;
   padding: 0px 10px;
 }
-
 
 #Home {
   background: var(--seven-color);
@@ -503,7 +502,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(3, minmax(30px, 1fr));
-  gap: 1em;
+  gap: 0px 0.8em;
 }
 
 #fraemworks span {
@@ -572,13 +571,13 @@ body::-webkit-scrollbar-thumb {
   10%{ margin-top: -90px; margin-bottom: 90px }
 
   20%{ margin-top: -200px; margin-bottom: 200px }
-  35%{ margin-top: -265px; margin-bottom: 265px }
+  35%{ margin-top: -295px; margin-bottom: 295px }
 
-  50% { margin-top: -350px; margin-bottom: 350px }
-  65%{ margin-top: -450px; margin-bottom: 450px }
+  50% { margin-top: -395px; margin-bottom: 395px }
+  65%{ margin-top: -480px; margin-bottom: 480px }
 
-  80%{ margin-top: -550px; margin-bottom: 550px }
-  95%{ margin-top: -640px; margin-bottom: 640px }
+  80%{ margin-top: -585px; margin-bottom: 585px }
+  95%{ margin-top: -655px; margin-bottom: 655px }
 }
 
 .aboutme {

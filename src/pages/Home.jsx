@@ -6,7 +6,7 @@ import I from '../assets/photo.jpeg';
 import { useDispatch } from 'react-redux';
 import { upLoadingThunk } from '../store/slices/isLoading.slice';
 import { data } from '../utils/image';
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
