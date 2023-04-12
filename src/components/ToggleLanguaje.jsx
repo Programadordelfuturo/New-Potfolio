@@ -28,9 +28,6 @@ const ToggleLanguaje = () => {
         change()
         }}
         >
-        <strong>
-          {valueLanguaje ?'English' : 'Español'}
-        </strong>
       </button>
     </>
   );

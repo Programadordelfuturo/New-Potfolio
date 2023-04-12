@@ -43,7 +43,7 @@ body {
 
 .Navbar {
   background: var(--tercer-color);
-  width: 99.95vw;
+  width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
@@ -166,13 +166,16 @@ body {
 #languaje {
   display: grid;
   place-content: center;
-  background: var(--fourteen-color);
+  background: url(./assets/Americana.png);
+  background-size: cover;
   width: 80px;
+  height: 45px;
   outline: none;
 }
 
 #languaje.change {
-  background: var(--thirteen-color);
+  background: url(./assets/Español.png);
+  background-size: cover;
 }
 
 #A {
@@ -191,9 +194,12 @@ body {
   padding: 0px 10px;
 }
 
+.container-Home {
+  margin: auto
+}
+
 #Home {
   background: var(--seven-color);
-  border-radius: 10px;
   display: flex;
   width: 530px;
   height: 340px;
@@ -225,7 +231,6 @@ body {
 #NAME {
   font-size: 19px !important
 }
-
 
 @media (max-width: 1090px){
   #Home {
@@ -450,11 +455,11 @@ body {
 }
 
 .Projects {
-  margin: 70px 30px 0px
+  margin: auto;
 }
 
 .Projects h1 {
-  color: rgb(0, 60, 255);
+  color: rgb(0, 217, 255);
   width: 76vw;
   margin: 20px 0px;
 }
@@ -473,6 +478,13 @@ body {
 .button-paginated button {
   margin: 0 30px;
   outline: none;
+}
+
+@media (max-width: 700px) {
+  .button-paginated {
+    flex-direction: column;
+    gap: 15px
+  }
 }
 
 #previus, #next, #reset {
@@ -498,18 +510,23 @@ body {
 
 .container-projects {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr)) ;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   gap: 50px;
   padding: 3px;
 }
 
-.Projects div div {
+.container-projects>div {
+  width: 300px;
+}
+
+.container-projects div {
   border: 3px solid rgb(255, 183, 28);
   border-radius: 5%;
   overflow: hidden;
 }
 
-.Projects div a img {
+.container-projects a img {
   width: 100%;
   height: 200px;
 }
@@ -606,7 +623,7 @@ body {
 .aboutme {
   background: rgba(0, 180, 180);
   color: var(--five-color);
-  width: 40vw;
+  width:  60vw;
   padding: 15px;
-  margin-top: 70px;
+  margin: auto;
 }

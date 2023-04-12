@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { containerProjects } from '../utils/projects';
+import { containerProjects, containerProjectsEnglish } from '../utils/projects';
 import { useSelector } from 'react-redux';
 
 const Portfolio = () => {
+
+  const valueLanguaje = useSelector(state => state.spanishOrEnglish)
+  const languajePortfolio = valueLanguaje ? containerProjects : containerProjectsEnglish;
 
   const [ page, setPage ] = useState(1)
   const projectsPerPage = 6
@@ -10,9 +13,8 @@ const Portfolio = () => {
   const finalIndex = page*projectsPerPage
   const firstIndex = (page - 1)*projectsPerPage;
   
-  const paginated = containerProjects.slice(firstIndex, finalIndex);
+  const paginated = languajePortfolio.slice(firstIndex, finalIndex);
 
-  const valueLanguaje = useSelector(state => state.spanishOrEnglish)
 
   return (
     <div className='Projects'>
@@ -20,7 +22,7 @@ const Portfolio = () => {
       <div className='button-paginated'>
       <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >{ valueLanguaje ?'Anterior' : 'Previus'}</button>
         <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >{ valueLanguaje ? 'Siguiente' : 'Next'}</button>
-        <button id='reset' onClick={() => setPage(1)}>{ valueLanguaje ? 'Inicio' : 'Init' }</button>
+        <button id='reset' onClick={() => setPage(1)} disabled = {page == 1} >{ valueLanguaje ? 'Inicio' : 'Init' }</button>
       </div>
       <div className='container-projects'>
         {
