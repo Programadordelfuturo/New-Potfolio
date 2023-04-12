@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { containerProjects } from '../utils/projects';
+import { useSelector } from 'react-redux';
 
 const Portfolio = () => {
 
@@ -11,13 +12,15 @@ const Portfolio = () => {
   
   const paginated = containerProjects.slice(firstIndex, finalIndex);
 
+  const valueLanguaje = useSelector(state => state.spanishOrEnglish)
+
   return (
     <div className='Projects'>
-      <h1>Portafolio<br/>Proyectos</h1>
+      <h1>{ valueLanguaje ? 'Proyectos' : 'Portfolio'}<br/>{ valueLanguaje ? 'Portafolio' : 'Projects'}</h1>
       <div className='button-paginated'>
-        <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >Anterior</button>
-        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >Siguiente</button>
-        <button id='reset' onClick={() => setPage(1)}>Inicio</button>
+      <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >{ valueLanguaje ?'Anterior' : 'Previus'}</button>
+        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >{ valueLanguaje ? 'Siguiente' : 'Next'}</button>
+        <button id='reset' onClick={() => setPage(1)}>{ valueLanguaje ? 'Inicio' : 'Init' }</button>
       </div>
       <div className='container-projects'>
         {
@@ -42,9 +45,9 @@ const Portfolio = () => {
         }
       </div>
       <div className='button-paginated'>
-        <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >Anterior</button>
-        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >Siguiente</button>
-        <button id='reset' onClick={() => setPage(1)}>Inicio</button>
+        <button id='previus' onClick={() => setPage(page - 1)} disabled = {page == 1} >{ valueLanguaje ?'Anterior' : 'Previus'}</button>
+        <button id='next' onClick={() => setPage(page + 1)} disabled = {page == lastPage} >{ valueLanguaje ? 'Siguiente' : 'Next'}</button>
+        <button id='reset' onClick={() => setPage(1)}>{ valueLanguaje ? 'Inicio' : 'Init' }</button>
       </div>
     </div>
   );

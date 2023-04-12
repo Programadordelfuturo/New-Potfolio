@@ -12,7 +12,7 @@
   --eleven-color: rgb(255, 255, 161);
   --twelve-color:  rgb(255, 194, 63);
   --thirteen-color: linear-gradient(45deg, rgba(255, 217, 0, 0.699), rgba(255, 0, 0, 0.699));
-  --fourteen-color: rgba(0, 0, 0);
+  --fourteen-color: linear-gradient(45deg, white, blue, red)
 }
 
 * {
@@ -106,13 +106,24 @@ body {
 
 .options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  top: 70px;
-  margin-right: 20px;
   background: var(--seven-color);
   cursor: pointer;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.8); 
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  border-radius: 10%;
+  padding: 7px 5px;
+}
+
+@media (max-width: 665px) {
+  .options {
+    grid-template-columns: repeat(3, 105px);
+    left: 8vw;
+    top: 70px;
+    padding: 0;
+  }
 }
 
 .options a {
@@ -152,6 +163,18 @@ body {
   left: 30px;
 }
 
+#languaje {
+  display: grid;
+  place-content: center;
+  background: var(--fourteen-color);
+  width: 80px;
+  outline: none;
+}
+
+#languaje.change {
+  background: var(--thirteen-color);
+}
+
 #A {
   border: 4px solid var(--nine-color);
   border-top: 4px solid var(--ten-color);
@@ -178,7 +201,6 @@ body {
   overflow: hidden auto;
   color: black;
   margin-top: 4em;
-  z-index: 0;
 }
 
 #Home::-webkit-scrollbar {
@@ -219,6 +241,7 @@ body {
     padding: 20px;
     overflow-y: hidden;
     position: relative;
+    top: 4em
   }
 
   #Home:nth-child(1){
@@ -582,7 +605,7 @@ body {
 
 .aboutme {
   background: rgba(0, 180, 180);
-  color: rgb(0, 0, 0);
+  color: var(--five-color);
   width: 40vw;
   padding: 15px;
   margin-top: 70px;

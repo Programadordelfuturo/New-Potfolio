@@ -1,20 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import I from '../assets/photo.jpeg';
-import { useDispatch } from 'react-redux';
-import { upLoadingThunk } from '../store/slices/isLoading.slice';
+import { useSelector } from 'react-redux';
 import { data } from '../utils/image';
-import { Link } from 'react-router-dom';
+import changeLanguaje from "../utils/languaje";
 
 const Home = () => {
 
-  const dispatch = useDispatch();
-  
-  useEffect(()=>{
-    dispatch(upLoadingThunk()) 
-  },[])
+  const valueLanguaje = useSelector(state => state.spanishOrEnglish)
 
   return (
     <div className='container-Home'>
@@ -29,8 +24,7 @@ const Home = () => {
             </p>
             <p>
               <strong>
-                Desarrollador Full Stack Developer ReactJS, NodeJS, Express, MongoDB, PostgreSQL, 
-                Sequelize, TailWindCSS, React Hooks, Axios, Redux, NextJS, Python, TypeScript
+                { valueLanguaje ? changeLanguaje[0].spanish : changeLanguaje[0].english }
               </strong>
             </p>
           </div>
@@ -45,14 +39,14 @@ const Home = () => {
         <div id='circle'></div>
         <p className='present'>
           <strong>
-            Contactame
+            { valueLanguaje ? 'Contactame' : 'Contact me' }
           </strong>
         </p>
         <div id='flecha'><div></div></div>
       </a>
       <p className='Title'>
         <strong>
-          TECNOLOGIAS
+          { valueLanguaje ? 'TECNOLOGIAS' : 'TECNOLOGIES'}
         </strong>
       </p>
       <div className='Technologies'>
