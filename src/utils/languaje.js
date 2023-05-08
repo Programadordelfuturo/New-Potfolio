@@ -30,6 +30,10 @@ const changeLanguaje = [
       get-togethers with friends I prefer them few times a
       month, but every time it happens I enjoy them and 
       I'm a fan of seafood.`
+  },
+  {
+    spanish: 'Soy actualmente Taka 5 en codewars con full javascript',
+    english: 'I\'m currently Taka 5 in codewars with full javascript'
   }
 ]
 

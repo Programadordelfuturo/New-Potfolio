@@ -116,6 +116,14 @@ export const containerProjects = [
     texto: `Puedes ver las frases ya preparadas que te deje 😉`,
     tecnologies: ['React', 'JS', 'Vite']
   },
+  // {
+  //   id: 13,
+  //   title: 'toDO List TypeScript',
+  //   referencia: ,
+  //   img: ,
+  //   texto: `App de ToDo creada con TypeScript, React, TailwindCSS`,
+  //   tecnologias: [],
+  // }
 ]
 
 export const containerProjectsEnglish = [

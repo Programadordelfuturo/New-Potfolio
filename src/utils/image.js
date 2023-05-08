@@ -9,6 +9,7 @@ import Express from '../assets/Express.png';
 import nodeJS from '../assets/nodeJS.png';
 import Postgres from '../assets/PostgresSQL.png';
 import Sequelize from '../assets/Sequelize.png';
+import Kata5 from '../assets/Kata5.png';
 
 export const data = [
   {
@@ -65,5 +66,10 @@ export const data = [
     id: 11,
     src: Sequelize,
     alt: 'Sequelize'
+  },
+  {
+    id: 12,
+    src: Kata5,
+    alt: 'Kata5'
   }
 ]
