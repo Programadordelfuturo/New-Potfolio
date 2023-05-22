@@ -1,6 +1,8 @@
 :root {
   --primary-url: linear-gradient(45deg, rgb(35, 161, 211), rgb(35, 161, 211));
   --second-url: linear-gradient(90deg, black, gray);
+  --three-url: url('./assets/fondo.pantalla.png');
+  --four-url: url('./assets/fondo.pantalla.principal.png');
   --tercer-color: rgba(228, 228, 228, 0.75);
   --four-color: white;
   --five-color: black;
@@ -32,8 +34,8 @@
 }
 
 body {
-  background: var(--primary-url);
-  background-size: cover;  
+  background: var(--four-url);
+  background-size: auto;  
   color: var(--five-color);
   display: flex;
   justify-content: center;

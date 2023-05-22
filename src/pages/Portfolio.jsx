@@ -37,8 +37,8 @@ const Portfolio = () => {
               </p>
               <div id='fraemworks'>
               {
-                project.tecnologies.map((tecnology) => (
-                  <span>{tecnology}</span>
+                project.tecnologies.map((tecnology, i) => (
+                  <span key={i}>{tecnology}</span>
                 ))
               }
               </div>

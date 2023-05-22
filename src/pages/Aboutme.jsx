@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import changeLanguaje from '../utils/languaje';
 import aboutLanguaje from '../utils/aboutLanguaje'
-import { data } from '../utils/image';
+import { imagePerson } from '../utils/image';
 
 const Aboutme = () => {
 
@@ -36,7 +36,7 @@ const Aboutme = () => {
             valueLanguaje ? changeLanguaje[2].spanish : changeLanguaje[2].english
           }
         </p>
-        <img src={data[11].src} alt={data[11].alt} />
+        <img src={imagePerson[0].src} alt={imagePerson[0].alt} />
       </div>
     </div>
   );

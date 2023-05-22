@@ -32,8 +32,8 @@ const changeLanguaje = [
       I'm a fan of seafood.`
   },
   {
-    spanish: 'Soy actualmente Taka 5 en codewars con full javascript',
-    english: 'I\'m currently Taka 5 in codewars with full javascript'
+    spanish: 'Soy actualmente Taka 5 en codewars con full javascript, lo que quiere decir que tengo muy buena logica de programación',
+    english: 'I\'m currently Taka 5 in codewars with full javascript, which means that I have very good programming logic.'
   }
 ]
 

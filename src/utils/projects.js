@@ -51,7 +51,7 @@ export const containerProjects = [
     referencia: "https://github.com/Programadordelfuturo/Ecommers-backend",
     img: PtodoAPI,
     texto: `API para E-commers, de lo cual tienes productos, productos agregados al carrito, etc`,
-    tecnologies: ['JS', 'nodeJS', 'Express', 'Sequelize', 'nodemon', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT', 'morgan'],
+    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT'],
   },
   {
     id: 6,
@@ -87,9 +87,9 @@ export const containerProjects = [
     img: Pcontability,
     texto: `Hecha para el mercado Chileno que ayuda a saber el
     monto final el cual tendra que pagar el cliente por un bien o servicio dado
-    y tambien ayuda a calcular el monto que se tiene que presentar y pagar ante 
+    y tambien calcular el monto que se tiene que presentar y pagar ante 
     la institución correspondiente`,
-    tecnologies: ['Vue', 'Tailwind CSS', 'JS', 'Vue CLI']
+    tecnologies: ['Vue', 'Tailwind CSS', 'Vue CLI']
   },
   {
     id: 10,
@@ -116,14 +116,14 @@ export const containerProjects = [
     texto: `Puedes ver las frases ya preparadas que te deje 😉`,
     tecnologies: ['React', 'JS', 'Vite']
   },
-  // {
-  //   id: 13,
-  //   title: 'toDO List TypeScript',
-  //   referencia: ,
-  //   img: ,
-  //   texto: `App de ToDo creada con TypeScript, React, TailwindCSS`,
-  //   tecnologias: [],
-  // }
+  {
+    id: 13,
+    title: 'toDO List',
+    referencia: "https://github.com/Programadordelfuturo/CRUDMongoDB",
+    img: PtodoAPI,
+    texto: `Proyecto personal sobre ToDo con tecnologias diferentes`,
+    tecnologies: ['node', 'mondoDB', 'Express'],
+  }
 ]
 
 export const containerProjectsEnglish = [
@@ -169,7 +169,7 @@ export const containerProjectsEnglish = [
     referencia: "https://github.com/Programadordelfuturo/Ecommers-backend",
     img: PtodoAPI,
     texto: `API for E-commers, from which you have products, products added to the cart, etc.`,
-    tecnologies: ['JS', 'nodeJS', 'Express', 'Sequelize', 'nodemon', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT', 'morgan'],
+    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT'],
   },
   {
     id: 6,
@@ -205,9 +205,9 @@ export const containerProjectsEnglish = [
     img: Pcontability,
     texto: `Made for the Chilean market that helps to know the final amount that the
     the final amount that the customer will have to pay for a given good or service and also helps to
-    and also helps to calculate the amount that has to be presented and paid to the corresponding 
+    and also to calculate the amount that has to be presented and paid to the corresponding 
     the corresponding institution`,
-    tecnologies: ['Vue', 'Tailwind CSS', 'JS', 'Vue CLI']
+    tecnologies: ['Vue', 'Tailwind CSS', 'Vue CLI']
   },
   {
     id: 10,
@@ -234,6 +234,14 @@ export const containerProjectsEnglish = [
     texto: `You can see the ready-made sentences I left you 😉`,
     tecnologies: ['React', 'JS', 'Vite']
   },
+  {
+    id: 13,
+    title: 'toDO List',
+    referencia: "https://github.com/Programadordelfuturo/CRUDMongoDB",
+    img: PtodoAPI,
+    texto: `Personal project on ToDo with different technologies`,
+    tecnologies: ['node', 'mondoDB', 'Express'],
+  }
 ]
 
 

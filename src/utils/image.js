@@ -66,7 +66,10 @@ export const data = [
     id: 11,
     src: Sequelize,
     alt: 'Sequelize'
-  },
+  }
+]
+
+export const imagePerson = [
   {
     id: 12,
     src: Kata5,
