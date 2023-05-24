@@ -33,9 +33,13 @@
   border-radius: 30px;
 }
 
+#root {
+  overflow: hidden;
+}
+
 body {
-  background: var(--four-url);
-  background-size: auto;  
+  background: url('./assets/fondo.pantalla.principal.png');
+  background-size: cover;  
   color: var(--five-color);
   display: flex;
   justify-content: center;
