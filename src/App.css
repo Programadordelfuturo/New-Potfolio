@@ -16,7 +16,7 @@
   --thirteen-color: linear-gradient(45deg, rgba(255, 217, 0, 0.699), rgba(255, 0, 0, 0.699));
   --fourteen-color: linear-gradient(45deg, white, blue, red)
 }
-
+/*url('./assets/fondo.pantalla.principal.png')*/
 * {
   padding: 0;
   margin: 0;
@@ -38,7 +38,7 @@
 }
 
 body {
-  background: url('./assets/fondo.pantalla.principal.png');
+  background: var(--four-url);
   background-size: cover;  
   color: var(--five-color);
   display: flex;
@@ -594,20 +594,24 @@ body {
   gap: 10px;
   position: absolute;
   top: 110px;
+  overflow: auto;
   left: 150px;
-  overflow: hidden;
   height: 390px;
-  background: rgb(255, 255, 255);
 }
 
 .Technologies img {
   width: 93px;
   height: 90px;
-  animation: change 8s infinite;
+}
+
+#tec-Front, #tec-Backend {
+  display: grid;
+  grid-template-columns: 4fr;
+  animation: change 6s ease-in-out delay iteration-count direction fill-mode;
 }
 
 @media (max-width: 1090px) {
-  .Title, .Technologies img{
+  .Title, .Technologies img, .Technologies {
     position: absolute;
     left: -300px;
   }

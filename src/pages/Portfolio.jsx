@@ -14,7 +14,7 @@ const Portfolio = () => {
   const firstIndex = (page - 1)*projectsPerPage;
   
   const paginated = languajePortfolio.slice(firstIndex, finalIndex);
-
+  
 
   return (
     <div className='Projects'>

@@ -51,7 +51,7 @@ export const containerProjects = [
     referencia: "https://github.com/Programadordelfuturo/Ecommers-backend",
     img: PtodoAPI,
     texto: `API para E-commers, de lo cual tienes productos, productos agregados al carrito, etc`,
-    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT'],
+    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'bcrypt', 'dotenv', 'JWT'],
   },
   {
     id: 6,
@@ -169,7 +169,7 @@ export const containerProjectsEnglish = [
     referencia: "https://github.com/Programadordelfuturo/Ecommers-backend",
     img: PtodoAPI,
     texto: `API for E-commers, from which you have products, products added to the cart, etc.`,
-    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'Thunder Client', 'bcrypt', 'cors', 'dotenv', 'JWT'],
+    tecnologies: ['nodeJS', 'Express', 'Sequelize', 'bcrypt', 'dotenv', 'JWT'],
   },
   {
     id: 6,

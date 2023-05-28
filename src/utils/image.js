@@ -46,24 +46,27 @@ export const data = [
     id: 7,
     src: reactRouter,
     alt: 'React-Router'
-  },
+  }
+]
+
+export const dataBackend = [
   {
-    id: 8,
-    src: Express,
-    alt: 'Express'
-  },
-  {
-    id: 9,
+    id: 1,
     src: nodeJS,
     alt: 'nodeJS'
   },
   {
-    id: 10,
+    id: 2,
+    src: Express,
+    alt: 'Express'
+  },
+  {
+    id: 3,
     src: Postgres,
     alt: 'PostgreSQL'
   },
   {
-    id: 11,
+    id: 4,
     src: Sequelize,
     alt: 'Sequelize'
   }
