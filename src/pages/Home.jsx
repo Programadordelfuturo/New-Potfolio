@@ -2,7 +2,7 @@ import React from 'react';
 import I from '../assets/photo.jpeg';
 import { useSelector } from 'react-redux';
 import changeLanguaje from "../utils/languaje";
-import Icons from './icons';
+import Icons from './Icons.';
 import Layout from './Layout';
 import ContactMe from './ContactMe';
 import Bold from './Bold';
